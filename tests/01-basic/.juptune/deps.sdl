@@ -1,0 +1,6 @@
+file "./app.c" meta_hash=0 last_modifier=0
+file "./lib.c" meta_hash=0 last_modifier=0
+file "./obj/app.o" meta_hash=0 last_modifier=0
+file "./obj/lib.o" meta_hash=0 last_modifier=0
+file "./bin/test_exe.exe" meta_hash=0 last_modifier=0
+file "./bin/release.exe" meta_hash=0 last_modifier=0

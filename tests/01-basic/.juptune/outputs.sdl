@@ -1,0 +1,4 @@
+file "./obj/app.o"
+file "./obj/lib.o"
+file "./bin/test_exe.exe"
+file "./bin/release.exe"

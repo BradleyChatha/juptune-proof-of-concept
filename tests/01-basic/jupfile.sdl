@@ -1,0 +1,27 @@
+define:sources "src/app.c" "src/lib.c"
+define:include "include/"
+use "./jupchain.lua"
+
+toolchain "test" {
+    pipeline "build c" {
+        bind:sources to="sources"
+        bind:include to="include"
+        set:output "./bin/test_exe.exe"
+        set:flags "-D TESTS"
+
+        export:return to="test_exe"
+    }
+
+    pipeline "run executable" {
+        bind:exe to="build c:test_exe"
+    }
+}
+
+toolchain "release" {
+    pipeline "build c" {
+        bind:sources to="sources"
+        bind:include to="include"
+        set:output "bin/release.exe"
+        set:flags "-O3" "-Wall"
+    }
+}
