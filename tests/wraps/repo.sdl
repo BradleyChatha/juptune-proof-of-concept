@@ -1,0 +1,4 @@
+wrap "cmake"    path="cmake.lua"
+wrap "llvm"     path="llvm.lua"
+wrap "ninja"    path="ninja.lua"
+wrap "clang"    path="clang.lua"

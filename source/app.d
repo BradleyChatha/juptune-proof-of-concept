@@ -1,5 +1,5 @@
 import std, jcli;
-import juptune.commands, juptune.lua;
+import juptune.commands;
 
 int main(string[] args)
 {

@@ -1,13 +1,26 @@
 {
 	"fileVersion": 1,
 	"versions": {
+		"archive": "0.7.0",
 		"bindbc-loader": "0.3.2",
 		"bindbc-lua": "0.4.1",
+		"botan": "1.12.19",
+		"botan-math": "1.0.3",
+		"diet-ng": "1.8.0",
+		"eventcore": "0.9.17",
 		"jansi": "0.1.1",
 		"jcli": "0.12.1",
 		"jioc": "0.2.0",
+		"libasync": "0.8.6",
+		"lumars": {"path":"../../Libs/lumars"},
+		"memutils": "1.0.4",
+		"mir-linux-kernel": "1.0.1",
+		"openssl": "1.1.6+1.0.1g",
 		"sdlite": "1.1.2",
 		"silly": "1.0.2",
-		"taggedalgebraic": "0.11.22"
+		"stdx-allocator": "2.77.5",
+		"taggedalgebraic": "0.11.22",
+		"vibe-core": "1.18.1",
+		"vibe-d": "0.9.3"
 	}
 }

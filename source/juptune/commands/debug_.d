@@ -1,30 +1,17 @@
 module juptune.commands.debug_;
 
-import std, juptune.sdl, juptune.lua, jcli, jcli : Command;
+import std, juptune.lua, lumars, jcli;
 
-@Command("translate")
-struct TranslateCommand
+@Command("debug")
+struct DebugCommand
 {
-    @CommandPositionalArg(0, "file", "The file to print the AST for.")
-    string file;
-
     void onExecute()
     {
-        writeln(translateJupfile(this.file.readText, this.file.dirName));
-    }
-}
-
-@Command("dump data")
-struct DumpDataCommand
-{
-    @CommandPositionalArg(0)
-    string file;
-
-    void onExecute()
-    {
-        auto lua = newJuptuneLua();
-        const text = translateJupfile(this.file.readText, this.file.dirName);
-        lua.doString(text);
-        lua.doString("print(inspect(juptune))");
+        auto l = newJuptuneState();
+        l.doFile("./tests/wraps/ninja.lua");
+        l.doFile("./tests/wraps/cmake.lua");
+        l.doFile("./tests/wraps/llvm.lua");
+        l.doFile("./tests/wraps/clang.lua");
+        l.doFile("./tests/jupfile.lua");
     }
 }
